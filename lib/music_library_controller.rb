@@ -22,7 +22,7 @@ class MusicLibraryController
   def list_songs
     n=0
     @sorted_hash_song_list.each do |song_name, index|
-      n=1
+      n+=1
       puts "#{n}. #{@song_list[index].artist.name} - #{@song_list[index].name} - #{@song_list[index].genre.name}"
     end
   end
