@@ -36,7 +36,7 @@ class MusicLibraryController
     end
     sorted_hash_artist_list = hash_artist_list.sort_by { |k, v| k}
     sorted_hash_artist_list.each do |artist_name, index_in_artist_list|
-      n=1
+      n+=1
       puts "#{n}. #{artist_list[index_in_artist_list].name}"
     end
   end
@@ -50,7 +50,7 @@ class MusicLibraryController
     end
     sorted_hash_genre_list = hash_genre_list.sort_by { |k, v| k}
     sorted_hash_genre_list.each do |genre_name, index_in_genre_list|
-      n=1
+      n+=1
       puts "#{n}. #{genre_list[index_in_genre_list].name}"
     end
   end
@@ -72,7 +72,7 @@ class MusicLibraryController
         end
         sorted_songs_hash = songs_hash.sort_by { |k, v| k}
         sorted_songs_hash.each do |song_name, index_in_songs_list|
-          n=1
+          n+=1
           puts "#{n}. #{song_name} - #{songs_list[index_in_songs_list].genre.name}"
         end
       end
@@ -96,7 +96,7 @@ class MusicLibraryController
         end
         sorted_songs_hash = songs_hash.sort_by { |k, v| k}
         sorted_songs_hash.each do |song_name, index_in_songs_list|
-          n=1
+          n+=1
           puts "#{n}. #{songs_list[index_in_songs_list].artist.name} - #{song_name}"
         end
       end
